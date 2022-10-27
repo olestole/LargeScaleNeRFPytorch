@@ -123,6 +123,7 @@ def Inverse_Interpolation(model_result, W_H):
 if __name__ == "__main__":
     torch.cuda.empty_cache()
     hparams = get_hparams()
+    print(hparams)
     os.makedirs(hparams['save_path'], exist_ok=True)
 
     block_split_info = None
