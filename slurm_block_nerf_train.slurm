@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
 #SBATCH --partition=GPUQ
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=V10032
 #SBATCH --account=ie-idi
 #SBATCH --time=04:00:00
 #SBATCH --nodes=1
@@ -35,6 +37,9 @@ module list
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+# Check if CUDA is available
+python -c "import torch; print(torch.cuda.is_available())"
 
 # Train 10 sub-models
 ROOT_DIR=$WORKDIR/data/pytorch_waymo_dataset
