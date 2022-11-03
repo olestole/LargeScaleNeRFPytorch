@@ -97,6 +97,8 @@ def get_opts():
                         help='experiment name')
     parser.add_argument('--refresh_every', type=int, default=1,
                         help='print the progress bar every X steps')
+    parser.add_argument('--num_workers', type=int, default=1,
+                        help='number of workers for dataloader')
 
     return vars(parser.parse_args())
 
