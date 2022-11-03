@@ -130,7 +130,8 @@ def main(hparams):
                       gpus=hparams['num_gpus'],  # torch.cuda.device_count()
                       # accelerator='ddp' if hparams['num_gpus'] > 1 else 'auto',
                       accelerator='auto',
-                      num_sanity_val_steps=1,#用于设置在开始训练前先进行num_sanity_val_steps个 batch的validation，以免你训练了一段时间，在校验的时候程序报错，导致浪费时间
+                    # TODO: Change back to 1 if it doesn't work
+                      num_sanity_val_steps=0,#用于设置在开始训练前先进行num_sanity_val_steps个 batch的validation，以免你训练了一段时间，在校验的时候程序报错，导致浪费时间
                       # Sanity check runs n validation batches before starting the training routine
                       benchmark=True,## torch.backends.cudnn.benchmark，可以提升神经网络的运行速度
                       profiler="simple" if hparams['num_gpus'] == 1 else None,
