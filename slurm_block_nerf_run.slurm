@@ -7,8 +7,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=16000
-#SBATCH --job-name="LargeScaleNeRFPytorch BlockNerfTrain"
-#SBATCH --output=block_nerf_gpu-srun.out
+#SBATCH --job-name="LargeScaleNeRFPytorch Run"
+#SBATCH --output=run-srun.out
 #SBATCH --mail-user=olesto@stud.ntnu.no
 #SBATCH --mail-type=ALL
 
@@ -40,17 +40,7 @@ pip install -r requirements.txt
 # Check if CUDA is available
 python -c "import torch; print(torch.cuda.is_available())"
 
-# Train 10 sub-models
-ROOT_DIR=$WORKDIR/data/pytorch_waymo_dataset
-BATCH_SIZE=1024
-NUM_EPOCHS=1
-NUM_GPUS=1
-EXP_NAME=exp
-
-# Run the training script
-for BLOCK_INDEX in {0..10}
-do
-    python train_block_nerf.py --root_dir $ROOT_DIR --batch_size $BATCH_SIZE --num_epochs $NUM_EPOCHS --num_gpus $NUM_GPUS --exp_name $EXP_NAME --block_index $BLOCK_INDEX
-done
+# Run training
+python run.py --config configs/default.py
 
 uname -a
