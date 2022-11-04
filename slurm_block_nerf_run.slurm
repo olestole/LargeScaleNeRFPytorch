@@ -32,13 +32,18 @@ module load Anaconda3/2020.07
 # List loaded modules for reproducibility
 module list
 
-# Create venv and install dependencies
-python -m venv venv
-source venv/bin/activate
+# Installation
+conda create -n nerf-block python=3.9
+pip install --upgrade pip
 pip install -r requirements.txt
+pip install tensorflow 
+pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 
-# Check if CUDA is available
-python -c "import torch; print(torch.cuda.is_available())"
+# Other libs for reconstructing custom scenes
+conda install -c conda-forge colmap
+conda install -c conda-forge imagemagick
+conda install pytorch-scatter -c pyg
 
 # Run training
 python run.py --config configs/default.py
