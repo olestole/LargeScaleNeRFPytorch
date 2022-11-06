@@ -134,3 +134,6 @@ logs/*
 ckpts/
 ckpts/*
 data
+
+# Added files
+/block-nerf

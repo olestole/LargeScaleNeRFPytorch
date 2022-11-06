@@ -1,0 +1,39 @@
+we are running from this directory: /cluster/home/olesto/code/LargeScaleNeRFPytorch
+ the name of the job is: LargeScaleNeRFPytorch COLMAP
+The job ID is 13088533
+The job was run on these nodes: idun-06-07
+Number of nodes: 1
+We are using 1 cores
+We are using 1 cores per node
+Total of 1 cores
+
+Currently Loaded Modules:
+  1) Anaconda3/2020.07
+
+ 
+
+/bin/bash
+# conda environments:
+#
+base                  *  /cluster/apps/eb/software/Anaconda3/2020.07
+jukebox                  /cluster/apps/eb/software/Anaconda3/2020.07/envs/jukebox
+picrust2                 /cluster/apps/eb/software/Anaconda3/2020.07/envs/picrust2
+colmap                   /cluster/home/olesto/.conda/envs/colmap
+nerf-block               /cluster/home/olesto/.conda/envs/nerf-block
+nerf-block2              /cluster/home/olesto/.conda/envs/nerf-block2
+                         /cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf
+
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/condabin/conda
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/conda
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/conda-env
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/activate
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/deactivate
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/etc/profile.d/conda.sh
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/etc/fish/conf.d/conda.fish
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/shell/condabin/Conda.psm1
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/shell/condabin/conda-hook.ps1
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/etc/profile.d/conda.csh
+no change     /cluster/home/olesto/.bashrc
+No action taken.
+slurmstepd: error: *** JOB 13088533 ON idun-06-07 CANCELLED AT 2022-11-05T14:38:12 ***

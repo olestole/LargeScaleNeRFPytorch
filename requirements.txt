@@ -22,4 +22,3 @@ torch_optimizer
 test-tube
 gdown
 pytorch_lightning
-torch-scatter

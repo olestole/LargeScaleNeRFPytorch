@@ -1,0 +1,62 @@
+we are running from this directory: /cluster/home/olesto/code/LargeScaleNeRFPytorch
+ the name of the job is: LargeScaleNeRFPytorch Run
+The job ID is 13046041
+The job was run on these nodes: idun-06-11
+Number of nodes: 1
+We are using 1 cores
+We are using 1 cores per node
+Total of 1 cores
+
+Currently Loaded Modules:
+  1) Anaconda3/2020.07
+
+ 
+
+/bin/bash
+# conda environments:
+#
+base                     /cluster/apps/eb/software/Anaconda3/2020.07
+jukebox                  /cluster/apps/eb/software/Anaconda3/2020.07/envs/jukebox
+picrust2                 /cluster/apps/eb/software/Anaconda3/2020.07/envs/picrust2
+colmap                   /cluster/home/olesto/.conda/envs/colmap
+nerf-block               /cluster/home/olesto/.conda/envs/nerf-block
+                      *  /cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf
+
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/condabin/conda
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/conda
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/conda-env
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/activate
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/bin/deactivate
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/etc/profile.d/conda.sh
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/etc/fish/conf.d/conda.fish
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/shell/condabin/Conda.psm1
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/shell/condabin/conda-hook.ps1
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /cluster/apps/eb/software/Anaconda3/2020.07/etc/profile.d/conda.csh
+no change     /cluster/home/olesto/.bashrc
+No action taken.
+No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+/cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf/lib/python3.9/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+Using /cluster/home/olesto/.cache/torch_extensions/py39_cpu as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /cluster/home/olesto/.cache/torch_extensions/py39_cpu/adam_upd_cuda/build.ninja...
+Traceback (most recent call last):
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/run.py", line 13, in <module>
+    from lib import utils, dvgo, dcvgo, dmpigo
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/lib/utils.py", line 11, in <module>
+    from .masked_adam import MaskedAdam
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/lib/masked_adam.py", line 7, in <module>
+    adam_upd_cuda = load(
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 1284, in load
+    return _jit_compile(
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 1508, in _jit_compile
+    _write_ninja_file_and_build_library(
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 1610, in _write_ninja_file_and_build_library
+    _write_ninja_file_to_build_library(
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 2014, in _write_ninja_file_to_build_library
+    cuda_flags = common_cflags + COMMON_NVCC_FLAGS + _get_cuda_arch_flags()
+  File "/cluster/home/olesto/code/LargeScaleNeRFPytorch/block-nerf/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 1780, in _get_cuda_arch_flags
+    arch_list[-1] += '+PTX'
+IndexError: list index out of range
+Linux idun-06-11 4.18.0-348.el8.0.2.x86_64 #1 SMP Sun Nov 14 00:51:12 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
